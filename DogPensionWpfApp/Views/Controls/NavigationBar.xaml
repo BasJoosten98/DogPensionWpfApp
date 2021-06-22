@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="DogPensionWpfApp.Views.Controls.NavigationBar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:services="clr-namespace:DogPensionWpfApp.Services"
+             xmlns:local="clr-namespace:DogPensionWpfApp.Views.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="100">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+        <Button Grid.Row="0" Content="Owners" Padding="20" Command="{Binding MainNavigateCommand}" CommandParameter="{x:Static services:RegisteredViewModel.OwnerList}" />
+        <Button Grid.Row="1" Content="Doggo's" Padding="20" Command="{Binding MainNavigateCommand}" CommandParameter="{x:Static services:RegisteredViewModel.DogList}"/>
+        <Button Grid.Row="2" Content="Reservations" Padding="20" Command="{Binding MainNavigateCommand}" CommandParameter="{x:Static services:RegisteredViewModel.ReservationList}"/>
+        <Button Grid.Row="4" Content="Logout" Padding="20" Command="{Binding LogoutCommand}"/>
+    </Grid>
+</UserControl>

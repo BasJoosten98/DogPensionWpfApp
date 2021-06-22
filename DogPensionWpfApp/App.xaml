@@ -1,0 +1,51 @@
+﻿<Application x:Class="DogPensionWpfApp.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:DogPensionWpfApp" 
+             xmlns:views="clr-namespace:DogPensionWpfApp.Views"
+             xmlns:viewmodels="clr-namespace:DogPensionWpfApp.ViewModels">
+    <Application.Resources>
+
+        <!--DataTemplate needs to be in a ResourceDictionary to get detected by MainWindow-->
+        <ResourceDictionary>
+
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Styles/Common.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            
+            <DataTemplate DataType="{x:Type viewmodels:LoginViewModel}">
+                <views:LoginView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewmodels:RegisterViewModel}">
+                <views:RegisterView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewmodels:OwnerListViewModel}">
+                <views:OwnerListView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewmodels:DogListViewModel}">
+                <views:DogListView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewmodels:OwnerDetailsViewModel}">
+                <views:OwnerDetailsView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewmodels:DogDetailsViewModel}">
+                <views:DogDetailsView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewmodels:ReservationDetailsViewModel}">
+                <views:ReservationDetailsView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewmodels:ReservationListViewModel}">
+                <views:ReservationsListView/>
+            </DataTemplate>
+
+        </ResourceDictionary>
+        
+    </Application.Resources>
+</Application>

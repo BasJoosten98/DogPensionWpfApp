@@ -1,0 +1,35 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:DogPensionWpfApp.Styles">
+
+    <!--HEADER COLOR AND BRUSH-->
+    <Color x:Key="colorSkyBlue">DeepSkyBlue</Color>
+    <SolidColorBrush x:Key="brushSkyBlue" Color="{StaticResource colorSkyBlue}"></SolidColorBrush>
+    
+    <!--FONTS-->
+    <Style TargetType="{x:Type Control}" x:Key="baseStyle">
+        <Setter Property="FontSize" Value="20" />
+    </Style>
+    <Style TargetType="{x:Type Button}" BasedOn="{StaticResource baseStyle}"></Style>
+    <Style TargetType="{x:Type TextBox}" BasedOn="{StaticResource baseStyle}"></Style>
+    <Style TargetType="{x:Type ListView}" BasedOn="{StaticResource baseStyle}"></Style>
+    <Style TargetType="{x:Type PasswordBox}" BasedOn="{StaticResource baseStyle}"></Style>
+    <Style TargetType="{x:Type DatePicker}" BasedOn="{StaticResource baseStyle}"></Style>
+    <Style TargetType="{x:Type TextBlock}">
+        <Setter Property="FontSize" Value="20"/>
+    </Style>
+    <Style TargetType="{x:Type TextBlock}" x:Key="titleText">
+        <Setter Property="FontSize" Value="30"/>
+    </Style>
+    
+    <!--OWNER DOG LIST ITEM PICTURE SIZE-->
+    <Style TargetType="{x:Type Grid}" x:Key="ownerDogListItemStyle">
+        <Setter Property="Height" Value="200"/>
+        <Setter Property="Width" Value="200"/>
+    </Style>
+    
+    <!--LISTVIEW WIDTH-->
+    <Style TargetType="{x:Type Control}" x:Key="reservationListViewStyle">
+        <Setter Property="Width" Value="300"/>
+    </Style>
+</ResourceDictionary>
